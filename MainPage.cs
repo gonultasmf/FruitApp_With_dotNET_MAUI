@@ -1,4 +1,6 @@
-﻿namespace FruitApp;
+﻿using FmgLib.MauiMarkup;
+
+namespace FruitApp;
 
 public partial class MainPage : FmgLibContentPage
 {
@@ -58,8 +60,8 @@ public partial class MainPage : FmgLibContentPage
                     new VerticalStackLayout()
                     .Padding(35)
                     .CenterVertical()
-                    .ItemsSources(e => e.Path("PapayaInfo"))
-                    .ItemTemplates(
+                    .BindableLayoutItemsSource(e => e.Path("PapayaInfo"))
+                    .BindableLayoutItemTemplate(
                         new DataTemplate(() =>
                             new Grid()
                             .Margin(0, 10, 0, 0)
@@ -74,7 +76,7 @@ public partial class MainPage : FmgLibContentPage
                                 .Column(1)
                                 .FontFamily("Regular")
                                 .FontSize(20)
-                                .TextEnd()
+                                .TextBottomRight()
                                 .Text(e => e.Path("Percentage").StringFormat("{0} %"))
                             )
                         )
