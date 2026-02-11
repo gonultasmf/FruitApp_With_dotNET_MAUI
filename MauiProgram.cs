@@ -2,7 +2,7 @@
 
 namespace FruitApp;
 
-[MauiMarkup(typeof(AcrylicView))]
+//[MauiMarkup(typeof(AcrylicView))]
 public static class MauiProgram
 {
     public static MauiApp CreateMauiApp()
